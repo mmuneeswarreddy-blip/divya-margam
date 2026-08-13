@@ -8,9 +8,40 @@
 
     <link rel="stylesheet" href="style.css">
 </head>
+<script>
+function enterDivyaMargam() {
+    document.getElementById("welcome-screen").style.display = "none";
+}
+</script>
+
 
 <body>
+<!-- Dharma Welcome Screen -->
+<div id="welcome-screen">
 
+    <div class="dharma-banner">
+
+        <div class="om-symbol">ॐ</div>
+
+        <div class="dharma-text">
+            <div class="telugu-quote">
+                ధర్మో రక్షతి రక్షితః
+            </div>
+
+            <div class="english-quote">
+                Dharmo Rakshati Rakshitah
+            </div>
+
+            <p>Welcome to Divya Margam</p>
+        </div>
+
+        <button onclick="enterDivyaMargam()">
+            Enter Divya Margam
+        </button>
+
+    </div>
+
+</div>
     <!-- Navigation Bar -->
     <header>
         <nav>
@@ -20,7 +51,7 @@
 
             <div class="nav-links">
                 <a href="index.html">Home</a>
-                <a href="#">Spiritual Guidance</a>
+               <a href="guidance.html">Spiritual Guidance</a>
                 <a href="#">Temples</a>
                 <a href="#">Bhagavad Gita</a>
                 <a href="#">About</a>
