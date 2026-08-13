@@ -534,3 +534,235 @@ footer p {
     object-fit: cover;
     display: block;
 }
+/* Spiritual Practices */
+
+.spiritual-practices {
+    padding: 60px 20px;
+    background: #fffaf0;
+}
+
+.spiritual-practices .guidance-container {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.practice-box {
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    border-top: 5px solid #d97700;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.practice-box h2 {
+    color: #8b4500;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.practice-box h3 {
+    color: #a0522d;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.practice-box p {
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.practice-box ul,
+.practice-box ol {
+    padding-left: 25px;
+}
+
+.practice-box li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Mobile View */
+
+@media (max-width: 700px) {
+
+    .spiritual-practices .guidance-container {
+        grid-template-columns: 1fr;
+    }
+
+    .practice-box {
+        padding: 22px;
+    }
+
+    .practice-box h2 {
+        font-size: 24px;
+    }
+}
+/* Daily Spiritual Routine */
+
+.routine-list {
+    margin-top: 25px;
+}
+
+.routine-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 15px 0;
+    border-bottom: 1px solid #ead8c0;
+}
+
+.routine-item:last-child {
+    border-bottom: none;
+}
+
+.routine-item > span {
+    font-size: 30px;
+    min-width: 40px;
+}
+
+.routine-item h3 {
+    margin: 0 0 5px;
+    color: #8b4500;
+}
+
+.routine-item p {
+    margin: 0;
+}
+/* ================================
+   Dharma Welcome Screen
+================================ */
+
+#welcome-screen {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f5efe5;
+    padding: 20px;
+}
+
+.dharma-banner {
+    width: min(900px, 95%);
+    min-height: 430px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 30px;
+
+    background:
+        radial-gradient(circle at 50% 45%,
+        rgba(255, 190, 70, 0.20),
+        transparent 28%),
+        linear-gradient(135deg, #5e0718, #8e1025, #5e0718);
+
+    border: 6px solid #d69b32;
+    border-radius: 35px;
+
+    box-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.35),
+        inset 0 0 0 3px #7d1b28,
+        inset 0 0 0 8px #e0aa45;
+}
+
+/* Decorative inner border */
+.dharma-banner::before {
+    content: "";
+    position: absolute;
+    inset: 15px;
+    border: 2px solid #e6b84f;
+    border-radius: 25px;
+    pointer-events: none;
+}
+
+/* Om symbol */
+.om-symbol {
+    font-size: 72px;
+    color: #ffd36a;
+    margin-bottom: 15px;
+    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Telugu quote */
+.telugu-quote {
+    color: #ffe7a0;
+    font-size: clamp(32px, 5vw, 55px);
+    font-weight: bold;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+/* English quote */
+.english-quote {
+    color: white;
+    font-size: clamp(20px, 3vw, 30px);
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Divya Margam text */
+.dharma-text p {
+    color: #f7d58a;
+    font-size: 19px;
+    margin-top: 18px;
+}
+
+/* Enter button */
+.dharma-banner button {
+    margin-top: 25px;
+    padding: 13px 28px;
+    border: 2px solid #f0c45b;
+    border-radius: 30px;
+
+    background: #f0b43c;
+    color: #5a0718;
+
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.dharma-banner button:hover {
+    transform: scale(1.05);
+    background: #ffd56f;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    #welcome-screen {
+        padding: 12px;
+    }
+
+    .dharma-banner {
+        min-height: 400px;
+        padding: 40px 20px;
+        border-width: 4px;
+    }
+
+    .om-symbol {
+        font-size: 58px;
+    }
+
+    .telugu-quote {
+        font-size: 30px;
+    }
+
+    .english-quote {
+        font-size: 19px;
+    }
+
+    .dharma-text p {
+        font-size: 16px;
+    }
+}
