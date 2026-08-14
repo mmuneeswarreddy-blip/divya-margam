@@ -1,0 +1,1480 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #3b2418;
+    background: #fffaf0;
+}
+
+
+/* Navigation Bar */
+header {
+    position: relative;
+    z-index: 10;
+    background: #fffaf0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+}
+
+nav {
+    max-width: 1200px;
+    margin: auto;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 25px;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    color: #b85c00;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #3b2418;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #d97700;
+}
+
+
+/* Home Hero */
+.hero {
+    min-height: 650px;
+
+    background-image:
+        linear-gradient(
+            rgba(55, 30, 15, 0.45),
+            rgba(55, 30, 15, 0.45)
+        ),
+        url("srikalahasthi-home-hero-16x9.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+
+/* Hero Content */
+.hero-overlay {
+    max-width: 900px;
+    padding: 40px 25px;
+    color: white;
+}
+
+.subtitle {
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-size: 65px;
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #ffd05a;
+}
+
+.description {
+    font-size: 21px;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+
+/* Buttons */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 30px;
+    background: #e87900;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background: #c85f00;
+}
+
+.btn.secondary {
+    background: white;
+    color: #8b4500;
+}
+
+.btn.secondary:hover {
+    background: #fff0d0;
+}
+
+
+/* Welcome Section */
+.welcome {
+    text-align: center;
+    padding: 80px 20px;
+  background:
+    linear-gradient(
+        rgba(50, 25, 10, 0.55),
+        rgba(50, 25, 10, 0.55)
+    ),
+    url("images/srikalahasthi-home-hero-16x9.jpg");
+
+background-size: cover;
+background-position: center;
+}
+
+.welcome h2 {
+    font-size: 38px;
+    margin-bottom: 25px;
+    color: white;
+text-shadow: 2px 2px 8px black;
+}
+
+.welcome p {
+    max-width: 750px;
+    margin: auto;
+    font-size: 19px;
+    line-height: 1.8;
+    color: white;
+    text-shadow: 1px 1px 6px black;
+}
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    background: #3b2418;
+    color: white;
+}
+
+footer h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+footer p {
+    margin: 8px 0;
+}
+
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    nav {
+        height: auto;
+        padding: 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links a {
+        font-size: 15px;
+    }
+
+    .hero {
+        min-height: 600px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .description {
+        font-size: 17px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* Srikalahasthi Temple Hero */
+
+.temple-hero {
+    min-height: 600px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(30, 15, 5, 0.45),
+            rgba(30, 15, 5, 0.45)
+        ),
+        url("images/srikalahasthi-home-hero-16x9.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    color: white;
+}
+
+.temple-hero-content {
+    max-width: 900px;
+    padding: 40px 20px;
+}
+
+.temple-hero-content p:first-child {
+    color: #ffd166;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.temple-hero-content h1 {
+    font-size: 52px;
+    margin: 20px 0;
+
+    color: white;
+
+    text-shadow:
+        2px 2px 8px black;
+}
+
+.temple-hero-content p:last-child {
+    font-size: 20px;
+    color: white;
+
+    text-shadow:
+        1px 1px 6px black;
+}
+/* Temple Information */
+
+.temple-facts {
+    max-width: 1100px;
+    margin: 40px auto 0;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.fact-card {
+    background: white;
+    padding: 30px 20px;
+
+    text-align: center;
+
+    border-radius: 18px;
+
+    box-shadow:
+        0 8px 25px rgba(61, 36, 24, 0.12);
+
+    border-top: 4px solid #c96b00;
+
+    transition: 0.3s;
+}
+
+.fact-card:hover {
+    transform: translateY(-7px);
+}
+
+.fact-card h3 {
+    font-size: 24px;
+    color: #a94f00;
+    margin-bottom: 12px;
+}
+
+.fact-card p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #4a3022;
+}
+/* Temple Information */
+
+.temple-facts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 35px 0 50px;
+}
+
+.fact-card {
+    background: white;
+    padding: 35px 25px;
+    text-align: center;
+    border-radius: 22px;
+    border-top: 5px solid #c87500;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.10);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fact-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.16);
+}
+
+.fact-card h3 {
+    font-size: 26px;
+    color: #b85c00;
+    margin-bottom: 18px;
+}
+
+.fact-card p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #3b2418;
+}
+/* Temple History */
+
+.temple-story {
+    padding: 80px 20px;
+    background: #fff8ed;
+}
+
+.temple-story .container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.temple-story .section-label {
+    text-align: center;
+    font-size: 18px;
+    color: #c87500;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.temple-story h2 {
+    text-align: center;
+    font-size: 38px;
+    color: #5a301d;
+    margin-bottom: 35px;
+}
+
+.story-content {
+    background: white;
+    padding: 40px 50px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
+    border-left: 6px solid #c87500;
+}
+
+.story-content p {
+    font-size: 19px;
+    line-height: 1.9;
+    color: #3b2418;
+    margin-bottom: 22px;
+}
+
+.story-content p:last-child {
+    margin-bottom: 0;
+}
+/* Dhyana & Chanting Section */
+
+.chanting-section {
+    padding: 70px 20px;
+    background: #fff8ed;
+    text-align: center;
+}
+
+.chanting-section h2 {
+    color: #8b4500;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.sloka-card {
+    max-width: 850px;
+    margin: auto;
+    padding: 40px 30px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    border-top: 5px solid #d97700;
+}
+
+.sloka-card h3 {
+    font-size: 25px;
+    color: #b85c00;
+    margin-bottom: 25px;
+}
+
+.sloka {
+    font-size: 24px;
+    line-height: 1.8;
+    font-weight: bold;
+    color: #4b2415;
+}
+
+.sloka-telugu {
+    font-size: 26px;
+    line-height: 1.9;
+    font-weight: bold;
+    color: #8b4500;
+    margin-top: 25px;
+}
+
+.chant-note {
+    margin-top: 25px;
+    font-size: 17px;
+    color: #555;
+    font-style: italic;
+}
+/* Associated Temples */
+
+.associated-temples {
+    padding: 70px 20px;
+    background: #fff8ed;
+}
+
+.associated-temples h2 {
+    text-align: center;
+    color: #8b4500;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.temple-cards {
+    display: flex;
+    justify-content: center;
+}
+
+.associated-card {
+    max-width: 850px;
+    width: 100%;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    border-top: 5px solid #d97700;
+}
+
+.temple-card-image {
+    height: 280px;
+    background: #ead8c0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #8b4500;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.temple-card-content {
+    padding: 30px;
+}
+
+.temple-card-content h3 {
+    color: #8b4500;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.temple-card-content h4 {
+    color: #b85c00;
+    margin-top: 25px;
+    font-size: 20px;
+}
+
+.temple-card-content p {
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.temple-card-content .location {
+    font-weight: bold;
+    color: #6b3a20;
+}
+
+.temple-card-content ul {
+    line-height: 2;
+    font-size: 17px;
+}
+/* Associated Temple Photo */
+
+.temple-card-image {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 15px 15px 0 0;
+}
+
+.temple-card-image img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+/* Spiritual Practices */
+
+.spiritual-practices {
+    padding: 60px 20px;
+    background: #fffaf0;
+}
+
+.spiritual-practices .guidance-container {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.practice-box {
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    border-top: 5px solid #d97700;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.practice-box h2 {
+    color: #8b4500;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.practice-box h3 {
+    color: #a0522d;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.practice-box p {
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.practice-box ul,
+.practice-box ol {
+    padding-left: 25px;
+}
+
+.practice-box li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Mobile View */
+
+@media (max-width: 700px) {
+
+    .spiritual-practices .guidance-container {
+        grid-template-columns: 1fr;
+    }
+
+    .practice-box {
+        padding: 22px;
+    }
+
+    .practice-box h2 {
+        font-size: 24px;
+    }
+}
+/* Daily Spiritual Routine */
+
+.routine-list {
+    margin-top: 25px;
+}
+
+.routine-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 15px 0;
+    border-bottom: 1px solid #ead8c0;
+}
+
+.routine-item:last-child {
+    border-bottom: none;
+}
+
+.routine-item > span {
+    font-size: 30px;
+    min-width: 40px;
+}
+
+.routine-item h3 {
+    margin: 0 0 5px;
+    color: #8b4500;
+}
+
+.routine-item p {
+    margin: 0;
+}
+/* ================================
+   Dharma Welcome Screen
+================================ */
+
+#welcome-screen {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f5efe5;
+    padding: 20px;
+}
+
+.dharma-banner {
+    width: min(900px, 95%);
+    min-height: 430px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 30px;
+
+    background:
+        radial-gradient(circle at 50% 45%,
+        rgba(255, 190, 70, 0.20),
+        transparent 28%),
+        linear-gradient(135deg, #5e0718, #8e1025, #5e0718);
+
+    border: 6px solid #d69b32;
+    border-radius: 35px;
+
+    box-shadow:
+        0 15px 45px rgba(0, 0, 0, 0.35),
+        inset 0 0 0 3px #7d1b28,
+        inset 0 0 0 8px #e0aa45;
+}
+
+/* Decorative inner border */
+.dharma-banner::before {
+    content: "";
+    position: absolute;
+    inset: 15px;
+    border: 2px solid #e6b84f;
+    border-radius: 25px;
+    pointer-events: none;
+}
+
+/* Om symbol */
+.om-symbol {
+    font-size: 72px;
+    color: #ffd36a;
+    margin-bottom: 15px;
+    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Telugu quote */
+.telugu-quote {
+    color: #ffe7a0;
+    font-size: clamp(32px, 5vw, 55px);
+    font-weight: bold;
+    line-height: 1.4;
+    margin-bottom: 10px;
+}
+
+/* English quote */
+.english-quote {
+    color: white;
+    font-size: clamp(20px, 3vw, 30px);
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* Divya Margam text */
+.dharma-text p {
+    color: #f7d58a;
+    font-size: 19px;
+    margin-top: 18px;
+}
+
+/* Enter button */
+.dharma-banner button {
+    margin-top: 25px;
+    padding: 13px 28px;
+    border: 2px solid #f0c45b;
+    border-radius: 30px;
+
+    background: #f0b43c;
+    color: #5a0718;
+
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.dharma-banner button:hover {
+    transform: scale(1.05);
+    background: #ffd56f;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    #welcome-screen {
+        padding: 12px;
+    }
+
+    .dharma-banner {
+        min-height: 400px;
+        padding: 40px 20px;
+        border-width: 4px;
+    }
+
+    .om-symbol {
+        font-size: 58px;
+    }
+
+    .telugu-quote {
+        font-size: 30px;
+    }
+
+    .english-quote {
+        font-size: 19px;
+    }
+
+    .dharma-text p {
+        font-size: 16px;
+    }
+}
+/* =========================================
+   DIVYA MARGAM - DHARMA WELCOME SCREEN
+   ========================================= */
+
+#welcome-screen {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background:
+        radial-gradient(circle at center,
+        rgba(255, 194, 72, 0.18),
+        transparent 35%),
+        linear-gradient(135deg, #2b0610, #65091d, #3a0612);
+
+    overflow: hidden;
+}
+
+/* Subtle spiritual glow */
+#welcome-screen::before {
+    content: "ॐ";
+    position: absolute;
+
+    font-size: 420px;
+    font-family: serif;
+
+    color: rgba(255, 205, 100, 0.035);
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    pointer-events: none;
+}
+
+/* Main banner */
+.dharma-banner {
+    position: relative;
+
+    width: min(900px, 94%);
+    min-height: 440px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 55px 35px;
+
+    background:
+        radial-gradient(
+            circle at 50% 35%,
+            rgba(255, 183, 61, 0.18),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #6d071c,
+            #9d142d,
+            #680719
+        );
+
+    border: 5px solid #d9a441;
+    border-radius: 32px;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.55),
+        inset 0 0 25px rgba(255, 203, 91, 0.15);
+}
+
+/* Inner gold border */
+.dharma-banner::before {
+    content: "";
+
+    position: absolute;
+    inset: 13px;
+
+    border: 2px solid #f0c15c;
+    border-radius: 22px;
+
+    pointer-events: none;
+}
+
+/* Decorative corner symbols */
+.dharma-banner::after {
+    content: "✦                         ✦";
+
+    position: absolute;
+    top: 22px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 85%;
+
+    color: #f4c85f;
+    font-size: 22px;
+
+    letter-spacing: 5px;
+
+    white-space: pre;
+}
+
+/* Om */
+.om-symbol {
+    position: relative;
+    z-index: 2;
+
+    font-size: 82px;
+    line-height: 1;
+
+    color: #ffd66b;
+
+    margin-bottom: 20px;
+
+    text-shadow:
+        0 0 10px rgba(255, 210, 100, 0.5),
+        0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Quote container */
+.dharma-text {
+    position: relative;
+    z-index: 2;
+}
+
+/* Telugu quote */
+.telugu-quote {
+    color: #ffe6a0;
+
+    font-family: "Noto Serif Telugu", "Nirmala UI", serif;
+
+    font-size: clamp(32px, 5vw, 58px);
+
+    font-weight: bold;
+
+    line-height: 1.5;
+
+    text-shadow:
+        0 3px 8px rgba(0, 0, 0, 0.45);
+}
+
+/* English quote */
+.english-quote {
+    margin-top: 8px;
+
+    color: #ffffff;
+
+    font-family: Georgia, serif;
+
+    font-size: clamp(21px, 3vw, 31px);
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+}
+
+/* Welcome text */
+.dharma-text p {
+    margin-top: 18px;
+
+    color: #f8d88b;
+
+    font-family: Georgia, serif;
+
+    font-size: 20px;
+
+    letter-spacing: 2px;
+}
+
+/* Enter button */
+.dharma-banner button {
+    position: relative;
+    z-index: 2;
+
+    margin-top: 28px;
+
+    padding: 14px 34px;
+
+    border: 2px solid #f4ce6a;
+    border-radius: 30px;
+
+    background: linear-gradient(
+        135deg,
+        #f3bd45,
+        #d99622
+    );
+
+    color: #570717;
+
+    font-size: 17px;
+    font-weight: bold;
+
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.3);
+
+    transition: all 0.3s ease;
+}
+
+.dharma-banner button:hover {
+    transform: translateY(-3px) scale(1.04);
+
+    background: linear-gradient(
+        135deg,
+        #ffe08a,
+        #efb93d
+    );
+
+    box-shadow:
+        0 8px 22px rgba(0, 0, 0, 0.4);
+}
+
+/* Mobile design */
+@media (max-width: 600px) {
+
+    #welcome-screen {
+        padding: 12px;
+    }
+
+    .dharma-banner {
+        width: 96%;
+        min-height: 430px;
+
+        padding: 45px 18px;
+
+        border-width: 4px;
+        border-radius: 25px;
+    }
+
+    .dharma-banner::before {
+        inset: 9px;
+        border-radius: 17px;
+    }
+
+    .dharma-banner::after {
+        top: 18px;
+        font-size: 16px;
+    }
+
+    .om-symbol {
+        font-size: 62px;
+        margin-bottom: 15px;
+    }
+
+    .telugu-quote {
+        font-size: 30px;
+    }
+
+    .english-quote {
+        font-size: 19px;
+    }
+
+    .dharma-text p {
+        font-size: 16px;
+        letter-spacing: 1px;
+    }
+
+    .dharma-banner button {
+        font-size: 16px;
+        padding: 12px 25px;
+    }
+}
+/* =========================================
+   FLAME + DIYA DECORATION
+   ========================================= */
+
+/* Left diya */
+.dharma-banner::marker {
+    display: none;
+}
+
+.dharma-banner .diya-left,
+.dharma-banner .diya-right {
+    position: absolute;
+    bottom: 38px;
+    z-index: 3;
+    font-size: 42px;
+    filter: drop-shadow(0 0 10px rgba(255, 180, 40, 0.7));
+}
+
+/* Left and right diya positions */
+.dharma-banner .diya-left {
+    left: 55px;
+}
+
+.dharma-banner .diya-right {
+    right: 55px;
+}
+
+/* Flame glow around banner */
+.dharma-banner {
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.55),
+        0 0 35px rgba(255, 150, 30, 0.18),
+        inset 0 0 30px rgba(255, 190, 60, 0.12);
+}
+
+/* Small glowing flames */
+.dharma-banner .flame-left,
+.dharma-banner .flame-right {
+    position: absolute;
+    bottom: 85px;
+    z-index: 2;
+
+    font-size: 30px;
+
+    animation: diyaFlame 1.2s infinite alternate;
+
+    filter:
+        drop-shadow(0 0 8px #ffb52e)
+        drop-shadow(0 0 16px #ff6a00);
+}
+
+.dharma-banner .flame-left {
+    left: 65px;
+}
+
+.dharma-banner .flame-right {
+    right: 65px;
+}
+
+@keyframes diyaFlame {
+    from {
+        transform: scale(1) translateY(0);
+        opacity: 0.8;
+    }
+
+    to {
+        transform: scale(1.12) translateY(-4px);
+        opacity: 1;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    .dharma-banner .diya-left {
+        left: 25px;
+    }
+
+    .dharma-banner .diya-right {
+        right: 25px;
+    }
+
+    .dharma-banner .flame-left {
+        left: 32px;
+    }
+
+    .dharma-banner .flame-right {
+        right: 32px;
+    }
+
+    .dharma-banner .diya-left,
+    .dharma-banner .diya-right {
+        font-size: 32px;
+    }
+
+    .dharma-banner .flame-left,
+    .dharma-banner .flame-right {
+        font-size: 23px;
+    }
+}
+/* =========================================
+   LANGUAGE SELECTION
+========================================= */
+
+#language-screen {
+    position: fixed;
+    inset: 0;
+    z-index: 100000;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(255, 200, 90, 0.15),
+            transparent 40%
+        ),
+        linear-gradient(
+            135deg,
+            #2b0610,
+            #65091d,
+            #3a0612
+        );
+}
+
+.language-box {
+    width: min(600px, 92%);
+
+    padding: 55px 35px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #741020,
+            #9b1930,
+            #69091b
+        );
+
+    border: 5px solid #d9a441;
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.55),
+        inset 0 0 25px rgba(255, 200, 80, 0.12);
+
+    position: relative;
+}
+
+.language-box::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 12px;
+
+    border: 2px solid #f0c15c;
+
+    border-radius: 21px;
+
+    pointer-events: none;
+}
+
+.language-om {
+    position: relative;
+
+    font-size: 70px;
+
+    color: #ffd66b;
+
+    margin-bottom: 10px;
+
+    text-shadow:
+        0 0 12px rgba(255, 210, 100, 0.5);
+}
+
+.language-box h1 {
+    position: relative;
+
+    color: #ffe6a0;
+
+    font-family: Georgia, serif;
+
+    font-size: clamp(32px, 6vw, 48px);
+
+    margin: 0;
+}
+
+.language-subtitle {
+    position: relative;
+
+    color: white;
+
+    font-size: 20px;
+
+    margin: 15px 0 30px;
+}
+
+.language-options {
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+.language-btn {
+    min-width: 130px;
+
+    padding: 14px 22px;
+
+    border: 2px solid #f0c45b;
+
+    border-radius: 28px;
+
+    background: #f0b43c;
+
+    color: #570717;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.language-btn:hover {
+    transform: translateY(-3px) scale(1.04);
+
+    background: #ffd66b;
+
+    box-shadow:
+        0 7px 18px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================================
+   MOBILE RESPONSIVE
+========================================= */
+
+@media (max-width: 600px) {
+
+    #language-screen {
+        padding: 12px;
+    }
+
+    .language-box {
+        width: 94%;
+
+        padding: 45px 18px;
+
+        border-width: 4px;
+
+        border-radius: 25px;
+    }
+
+    .language-box::before {
+        inset: 9px;
+
+        border-radius: 17px;
+    }
+
+    .language-om {
+        font-size: 58px;
+    }
+
+    .language-box h1 {
+        font-size: 34px;
+    }
+
+    .language-subtitle {
+        font-size: 17px;
+    }
+
+    .language-options {
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 12px;
+    }
+
+    .language-btn {
+        width: 80%;
+
+        max-width: 250px;
+
+        padding: 13px;
+
+        font-size: 17px;
+    }
+}
+/* Show language selection first */
+#welcome-screen {
+    display: none;
+}
+/* ============================= */
+/* 📱 MOBILE RESPONSIVE DESIGN */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    /* Navigation */
+    nav {
+        flex-direction: column;
+        padding: 15px;
+        gap: 12px;
+    }
+
+    .nav-links {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+        padding: 6px 8px;
+    }
+
+    /* Main containers */
+    .container {
+        width: 92%;
+        max-width: 100%;
+        margin: auto;
+    }
+
+    /* Headings */
+    h1 {
+        font-size: 32px;
+        line-height: 1.2;
+    }
+
+    h2 {
+        font-size: 26px;
+        line-height: 1.25;
+    }
+
+    h3 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    /* Images */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Temple cards */
+    .temple-grid,
+    .temple-cards,
+    .legend-grid {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .temple-card,
+    .associated-card,
+    .legend-card {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Temple images */
+    .temple-card img,
+    .associated-card img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    /* Story content */
+    .story-content {
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    /* Hero */
+    .temple-hero {
+        min-height: 55vh;
+    }
+
+    .temple-hero-content {
+        width: 90%;
+        padding: 20px;
+    }
+
+    /* Buttons */
+    .buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    /* Associated temples */
+    .associated-temples {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    /* Sacred legends */
+    .legend-card {
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+}

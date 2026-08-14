@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Divya Margam</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        let selectedLanguage = "en";
+
+        const translations = {
+
+            en: {
+                selectLanguage: "Select Your Language",
+
+                welcome: "Welcome to Divya Margam",
+                enter: "Enter Divya Margam",
+
+                home: "Home",
+                guidance: "Spiritual Guidance",
+                temples: "Temples",
+                gita: "Bhagavad Gita",
+                about: "About",
+
+                journey: "🕉️ A Journey Towards Inner Peace",
+
+                welcomeTitle: "Welcome to",
+                siteName: "Divya Margam",
+
+                description:
+                    "Discover spiritual wisdom, sacred temples, Bhagavad Gita teachings and simple guidance for a peaceful life.",
+
+                exploreGuidance: "Explore Guidance",
+                exploreTemples: "Explore Temples",
+
+                peacefulLife: "🙏 Walk Towards a Peaceful Life",
+
+                welcomeText:
+                    "Divya Margam is a spiritual space dedicated to devotion, temple traditions, ancient wisdom and peaceful living.",
+
+                footerText:
+                    "A path towards peace, devotion and spiritual knowledge.",
+
+                rights:
+                    "© 2026 Divya Margam. All Rights Reserved."
+            },
+
+            te: {
+                selectLanguage: "మీ భాషను ఎంచుకోండి",
+
+                welcome: "దివ్య మార్గానికి స్వాగతం",
+                enter: "దివ్య మార్గంలోకి ప్రవేశించండి",
+
+                home: "హోమ్",
+                guidance: "ఆధ్యాత్మిక మార్గదర్శకత్వం",
+                temples: "దేవాలయాలు",
+                gita: "భగవద్గీత",
+                about: "మా గురించి",
+
+                journey: "🕉️ అంతరంగ శాంతి వైపు ఒక ప్రయాణం",
+
+                welcomeTitle: "స్వాగతం",
+                siteName: "దివ్య మార్గం",
+
+                description:
+                    "ఆధ్యాత్మిక జ్ఞానం, పవిత్ర దేవాలయాలు, భగవద్గీత బోధనలు మరియు ప్రశాంతమైన జీవితం కోసం సరళమైన మార్గదర్శకత్వాన్ని తెలుసుకోండి.",
+
+                exploreGuidance: "మార్గదర్శకత్వాన్ని చూడండి",
+                exploreTemples: "దేవాలయాలను చూడండి",
+
+                peacefulLife: "🙏 ప్రశాంతమైన జీవితం వైపు అడుగులు వేయండి",
+
+                welcomeText:
+                    "దివ్య మార్గం భక్తి, దేవాలయ సంప్రదాయాలు, ప్రాచీన జ్ఞానం మరియు ప్రశాంతమైన జీవన విధానానికి అంకితమైన ఆధ్యాత్మిక వేదిక.",
+
+                footerText:
+                    "శాంతి, భక్తి మరియు ఆధ్యాత్మిక జ్ఞానం వైపు ఒక మార్గం.",
+
+                rights:
+                    "© 2026 దివ్య మార్గం. సర్వహక్కులు రిజర్వ్ చేయబడ్డాయి."
+            },
+
+            ta: {
+                selectLanguage: "உங்கள் மொழியைத் தேர்ந்தெடுக்கவும்",
+
+                welcome: "திவ்ய மார்கத்திற்கு வரவேற்கிறோம்",
+                enter: "திவ்ய மார்கத்தில் நுழையுங்கள்",
+
+                home: "முகப்பு",
+                guidance: "ஆன்மீக வழிகாட்டுதல்",
+                temples: "கோயில்கள்",
+                gita: "பகவத் கீதை",
+                about: "எங்களைப் பற்றி",
+
+                journey: "🕉️ உள்ளார்ந்த அமைதியை நோக்கிய ஒரு பயணம்",
+
+                welcomeTitle: "வரவேற்கிறோம்",
+                siteName: "திவ்ய மார்கம்",
+
+                description:
+                    "ஆன்மீக ஞானம், புனித கோயில்கள், பகவத் கீதை போதனைகள் மற்றும் அமைதியான வாழ்க்கைக்கான எளிய வழிகாட்டுதல்களை அறிந்துகொள்ளுங்கள்.",
+
+                exploreGuidance: "வழிகாட்டுதலைப் பார்க்கவும்",
+                exploreTemples: "கோயில்களைப் பார்க்கவும்",
+
+                peacefulLife: "🙏 அமைதியான வாழ்க்கையை நோக்கி நடப்போம்",
+
+                welcomeText:
+                    "திவ்ய மார்கம் பக்தி, கோயில் மரபுகள், பண்டைய ஞானம் மற்றும் அமைதியான வாழ்க்கைக்கு அர்ப்பணிக்கப்பட்ட ஆன்மீக தளம்.",
+
+                footerText:
+                    "அமைதி, பக்தி மற்றும் ஆன்மீக ஞானத்தை நோக்கிய ஒரு பாதை.",
+
+                rights:
+                    "© 2026 திவ்ய மார்கம். அனைத்து உரிமைகளும் பாதுகாக்கப்பட்டவை."
+            }
+        };
+
+
+        function selectLanguage(language) {
+
+            selectedLanguage = language;
+
+            localStorage.setItem("divyaMargamLanguage", language);
+
+            applyLanguage();
+
+            document.getElementById("language-screen").style.display = "none";
+
+            document.getElementById("welcome-screen").style.display = "flex";
+        }
+
+
+        function applyLanguage() {
+
+            const t = translations[selectedLanguage];
+
+            document.documentElement.lang = selectedLanguage;
+
+            document.getElementById("language-title").textContent =
+                t.siteName;
+
+            document.getElementById("language-subtitle").textContent =
+                t.selectLanguage;
+
+            document.getElementById("welcome-message").textContent =
+                t.welcome;
+
+            document.getElementById("enter-button").textContent =
+                t.enter;
+
+            document.getElementById("nav-home").textContent =
+                t.home;
+
+            document.getElementById("nav-guidance").textContent =
+                t.guidance;
+
+            document.getElementById("nav-temples").textContent =
+                t.temples;
+
+            document.getElementById("nav-gita").textContent =
+                t.gita;
+
+            document.getElementById("nav-about").textContent =
+                t.about;
+
+            document.getElementById("hero-subtitle").textContent =
+                t.journey;
+
+            document.getElementById("hero-welcome").textContent =
+                t.welcomeTitle;
+
+            document.getElementById("hero-site-name").textContent =
+                t.siteName;
+
+            document.getElementById("hero-description").textContent =
+                t.description;
+
+            document.getElementById("guidance-button").textContent =
+                t.exploreGuidance;
+
+            document.getElementById("temples-button").textContent =
+                t.exploreTemples;
+
+            document.getElementById("peaceful-title").textContent =
+                t.peacefulLife;
+
+            document.getElementById("peaceful-text").textContent =
+                t.welcomeText;
+
+            document.getElementById("footer-title").textContent =
+                "🕉️ " + t.siteName;
+
+            document.getElementById("footer-text").textContent =
+                t.footerText;
+
+            document.getElementById("footer-rights").textContent =
+                t.rights;
+        }
+
+
+        function enterDivyaMargam() {
+
+            document.getElementById("welcome-screen").style.display =
+                "none";
+        }
+    </script>
+
+</head>
+
+
+<body>
+
+    <!-- ================================
+         LANGUAGE SELECTION SCREEN
+    ================================= -->
+
+    <div id="language-screen">
+
+        <div class="language-box">
+
+            <div class="language-om">ॐ</div>
+
+            <h1 id="language-title">
+                Divya Margam
+            </h1>
+
+            <p id="language-subtitle" class="language-subtitle">
+                Select Your Language
+            </p>
+
+            <div class="language-options">
+
+                <button
+                    class="language-btn"
+                    onclick="selectLanguage('te')">
+                    తెలుగు
+                </button>
+
+                <button
+                    class="language-btn"
+                    onclick="selectLanguage('en')">
+                    English
+                </button>
+
+                <button
+                    class="language-btn"
+                    onclick="selectLanguage('ta')">
+                    தமிழ்
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================================
+         DHARMA WELCOME SCREEN
+    ================================= -->
+
+    <div id="welcome-screen">
+
+        <div class="dharma-banner">
+
+            <div class="diya-left">🪔</div>
+            <div class="diya-right">🪔</div>
+
+            <div class="flame-left">🔥</div>
+            <div class="flame-right">🔥</div>
+
+            <div class="om-symbol">ॐ</div>
+
+            <div class="dharma-text">
+
+                <div class="telugu-quote">
+                    ధర్మో రక్షతి రక్షితః
+                </div>
+
+                <div class="english-quote">
+                    Dharmo Rakshati Rakshitah
+                </div>
+
+                <p id="welcome-message">
+                    Welcome to Divya Margam
+                </p>
+
+            </div>
+
+            <button
+                id="enter-button"
+                onclick="enterDivyaMargam()">
+
+                Enter Divya Margam
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================================
+         NAVIGATION BAR
+    ================================= -->
+
+    <header>
+
+        <nav>
+
+            <div class="logo">
+                🕉️ Divya Margam
+            </div>
+
+            <div class="nav-links">
+
+                <a
+                    id="nav-home"
+                    href="index.html">
+                    Home
+                </a>
+
+                <a
+                    id="nav-guidance"
+                    href="guidance.html">
+                    Spiritual Guidance
+                </a>
+
+                <a
+                    id="nav-temples"
+                    href="temples.html">
+                    Temples
+                </a>
+
+                <a
+                    id="nav-gita"
+                    href="#">
+                    Bhagavad Gita
+                </a>
+
+                <a
+                    id="nav-about"
+                    href="#">
+                    About
+                </a>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ================================
+         HOME HERO SECTION
+    ================================= -->
+
+    <section class="hero">
+
+        <div class="hero-overlay">
+
+            <p
+                id="hero-subtitle"
+                class="subtitle">
+
+                🕉️ A Journey Towards Inner Peace
+
+            </p>
+
+
+            <h1>
+
+                <span id="hero-welcome">
+                    Welcome to
+                </span>
+
+                <br>
+
+                <span id="hero-site-name">
+                    Divya Margam
+                </span>
+
+            </h1>
+
+
+            <p
+                id="hero-description"
+                class="description">
+
+                Discover spiritual wisdom, sacred temples,
+                Bhagavad Gita teachings and simple guidance
+                for a peaceful life.
+
+            </p>
+
+
+            <div class="buttons">
+
+                <a
+                    id="guidance-button"
+                    href="guidance.html"
+                    class="btn">
+
+                    Explore Guidance
+
+                </a>
+
+
+                <a
+                    id="temples-button"
+                    href="temples.html"
+                    class="btn secondary">
+
+                    Explore Temples
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================================
+         WELCOME SECTION
+    ================================= -->
+
+    <section class="welcome">
+
+        <h2 id="peaceful-title">
+            🙏 Walk Towards a Peaceful Life
+        </h2>
+
+
+        <p id="peaceful-text">
+
+            Divya Margam is a spiritual space dedicated to
+            devotion, temple traditions, ancient wisdom and
+            peaceful living.
+
+        </p>
+
+    </section>
+
+
+    <!-- ================================
+         FOOTER
+    ================================= -->
+
+    <footer>
+
+        <h3 id="footer-title">
+            🕉️ Divya Margam
+        </h3>
+
+
+        <p id="footer-text">
+
+            A path towards peace, devotion and spiritual knowledge.
+
+        </p>
+
+
+        <p id="footer-rights">
+
+            © 2026 Divya Margam. All Rights Reserved.
+
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
